@@ -64,7 +64,7 @@ function Login({ onLoginSuccess }) {
     setLoading(true);
 
     try {
-      const endpoint = isRegister ? '/api/auth/register' : '/api/auth/login';
+      const endpoint = isRegister ? `${process.env.REACT_APP_API_URL}/auth/register` : `${process.env.REACT_APP_API_URL}/auth/login`;
       const response = await fetch(endpoint, {
         method: 'POST',
         headers: {
