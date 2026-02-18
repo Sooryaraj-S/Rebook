@@ -1,0 +1,27 @@
+{
+  "name": "rebook",
+  "version": "1.0.0",
+  "description": "Rebook - Secure Emergency Contact Access",
+  "private": true,
+  "scripts": {
+    "install-all": "cd server && npm install && cd ../client && npm install",
+    "dev": "concurrently \"cd server && npm start\" \"cd client && npm start\"",
+    "server": "cd server && npm start",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "start": "cd server && npm start"
+  },
+  "keywords": [
+    "emergency",
+    "contacts",
+    "secure"
+  ],
+  "author": "Sooryaraj",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "engines": {
+    "node": "14.x || 16.x || 18.x"
+  }
+}
