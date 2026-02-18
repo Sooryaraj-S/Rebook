@@ -1,0 +1,268 @@
+/**
+ * Component Specific Styles
+ */
+
+/* ============= TABLE ============= */
+.table-container {
+  overflow-x: auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+}
+
+.contacts-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.contacts-table thead {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.contacts-table thead th {
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+.contacts-table tbody tr {
+  border-bottom: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.contacts-table tbody tr:hover {
+  background-color: var(--background-color);
+}
+
+.contacts-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.contacts-table td {
+  padding: 16px;
+  font-size: 0.95rem;
+  color: var(--text-color);
+}
+
+.cell-sno {
+  font-weight: 600;
+  color: var(--primary-color);
+  width: 60px;
+}
+
+.cell-name {
+  font-weight: 500;
+}
+
+.cell-phone {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  color: var(--text-light);
+}
+
+.cell-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+/* ============= MODAL/FORM ============= */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow-lg);
+  padding: 32px;
+  width: 100%;
+  max-width: 500px;
+  animation: slideUp 0.3s ease-out;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 16px;
+}
+
+.modal-header h3 {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-light);
+  transition: var(--transition);
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close:hover {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  border-radius: 6px;
+}
+
+.contact-form {
+  margin-bottom: 24px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+.modal-actions button {
+  flex: 1;
+  max-width: 140px;
+}
+
+/* ============= LANGUAGE SWITCHER ============= */
+.language-switcher {
+  display: inline-block;
+}
+
+.language-select {
+  padding: 8px 12px;
+  border: 2px solid var(--primary-color);
+  border-radius: 6px;
+  background-color: white;
+  color: var(--text-color);
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.language-select:hover {
+  background-color: var(--primary-light);
+  color: white;
+  border-color: var(--primary-light);
+}
+
+.language-select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+}
+
+/* ============= Responsive Table ============= */
+@media (max-width: 768px) {
+  .table-container {
+    border-radius: 8px;
+  }
+
+  .contacts-table thead {
+    font-size: 0.85rem;
+  }
+
+  .contacts-table th,
+  .contacts-table td {
+    padding: 12px 8px;
+    font-size: 0.85rem;
+  }
+
+  .cell-sno {
+    width: 45px;
+  }
+
+  .cell-actions {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .btn-action {
+    padding: 6px 8px;
+    font-size: 0.7rem;
+    margin: 2px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .modal-content {
+    padding: 24px;
+  }
+
+  .modal-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  .modal-actions button {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contacts-table thead th {
+    padding: 12px 6px;
+    font-size: 0.75rem;
+  }
+
+  .contacts-table td {
+    padding: 12px 6px;
+    font-size: 0.75rem;
+  }
+
+  .cell-sno {
+    width: 35px;
+  }
+
+  .cell-phone {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .modal-content {
+    padding: 20px;
+    max-width: 90vw;
+  }
+
+  .modal-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .modal-close {
+    align-self: flex-end;
+  }
+
+  .language-select {
+    font-size: 0.8rem;
+    padding: 6px 8px;
+  }
+}
