@@ -7,7 +7,7 @@
 
 ## 📱 Overview
 
-**Rebook** is a secure web application that allows users to access up to 5 saved emergency contact numbers when their phone is switched off or unavailable. Users can log in from anywhere using their phone number and a unique 6-digit passcode.
+**Rebook** is a secure web application that allows users to access up to 5 saved emergency contact numbers when their phone is switched off or unavailable. Users can log in from anywhere using their phone number and a unique 6-digit passcode..
 
 ### Key Features
 
